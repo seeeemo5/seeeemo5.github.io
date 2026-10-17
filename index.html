@@ -17,14 +17,13 @@
 <link rel="icon" href="img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Cairo:wght@600;800&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #120a26; --bg2: #1d1240; --card: #241650; --edge: #3c2a78;
     --text: #f4efff; --muted: #b7a9dd; --gold: #ffc53d; --gold2: #ff9f1c; --blue: #7ab8ff;
     --font: "Nunito", "Segoe UI", system-ui, sans-serif; --display: "Lilita One", "Nunito", sans-serif;
   }
-  [dir=rtl] { --font: "Cairo", "Segoe UI", Tahoma, sans-serif; --display: "Cairo", sans-serif; }
   * { box-sizing: border-box; }
   html { background: var(--bg); }
   body { margin: 0; min-height: 100vh; color: var(--text); font-family: var(--font); line-height: 1.5;
@@ -38,9 +37,6 @@
   .who { flex: 1; min-width: 0; }
   .who h1 { margin: 0; font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: .3px; }
   .who p { margin: 0; color: var(--muted); font-weight: 600; font-size: 15px; }
-  .lang { flex: none; border: 2px solid var(--edge); background: var(--bg2); color: var(--text); font: 800 14px var(--font);
-    border-radius: 999px; padding: 8px 14px; cursor: pointer; }
-  .lang:hover { border-color: var(--gold); }
   .socials { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 22px; }
   .chip { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 800; font-size: 14px;
     background: var(--bg2); border: 2px solid var(--edge); border-radius: 999px; padding: 7px 14px; }
@@ -60,7 +56,6 @@
     font-size: 12px; text-transform: uppercase; letter-spacing: .5px; padding: 4px 10px; border-radius: 999px; box-shadow: 0 3px 10px #0007; }
   .badge.new { background: var(--gold); color: #3a1d00; }
   .badge.cat { background: var(--blue); color: #061a33; }
-  [dir=rtl] .badge { text-transform: none; letter-spacing: 0; }
   .info { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 11px; }
   .info h3 { margin: 0; font-family: var(--display); font-weight: 800; font-size: 26px; line-height: 1.15; }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -76,7 +71,6 @@
   .play:hover { transform: translateY(-2px); }
   .play:active { transform: translateY(3px); box-shadow: 0 3px 0 #a35a00; }
   .play svg { width: 20px; height: 20px; fill: currentColor; }
-  [dir=rtl] .play svg { transform: scaleX(-1); }
 
   .note { margin-top: 18px; text-align: center; color: var(--muted); font-weight: 700; font-size: 14px; }
   .soon { margin-top: 16px; border: 2.5px dashed var(--edge); border-radius: 20px; padding: 20px; text-align: center; color: var(--muted); font-weight: 700; }
@@ -98,9 +92,8 @@
     <div class="avatar" role="img" aria-label="Ali Alhawaj"></div>
     <div class="who">
       <h1>Ali Alhawaj</h1>
-      <p data-i18n="tagline">Indie game developer · free games for your browser</p>
+      <p>Indie game developer · free games for your browser</p>
     </div>
-    <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
   </header>
   <div class="socials">
     <a class="chip" href="https://x.com/Ali_Alhwaj" target="_blank" rel="noopener">
@@ -109,26 +102,26 @@
     </a>
   </div>
 
-  <h2 class="sec" data-i18n="myGames">My games</h2>
+  <h2 class="sec">My games</h2>
   <div class="games">
 
     <article class="game">
       <div class="media">
         <video src="img/horde-smash-clip.mp4" poster="img/horde-smash.webp" autoplay muted loop playsinline preload="metadata" aria-label="Horde Smash gameplay"></video>
-        <span class="badge new" data-i18n="new">New</span>
+        <span class="badge new">New</span>
       </div>
       <div class="info">
         <h3>Horde Smash</h3>
-        <div class="tags"><span class="tag" data-i18n="action">Action</span><span class="tag" data-i18n="roguelite">Roguelite</span><span class="tag" data-i18n="free">Free</span></div>
-        <p data-i18n="hsDesc">One hero against endless hordes. Your hero attacks on their own: you move, collect gems and pick upgrades that evolve into powerful combos.</p>
+        <div class="tags"><span class="tag">Action</span><span class="tag">Roguelite</span><span class="tag">Free</span></div>
+        <p>One hero against endless hordes. Your hero attacks on their own: you move, collect gems and pick upgrades that evolve into powerful combos.</p>
         <div class="facts">
-          <div class="fact"><b>51</b><small data-i18n="heroes">heroes</small></div>
-          <div class="fact"><b>52</b><small data-i18n="weapons">weapons</small></div>
-          <div class="fact"><b>15</b><small data-i18n="chapters">chapters</small></div>
+          <div class="fact"><b>51</b><small>heroes</small></div>
+          <div class="fact"><b>52</b><small>weapons</small></div>
+          <div class="fact"><b>15</b><small>chapters</small></div>
         </div>
         <a class="play" href="https://playgama.ai/play/yo73j6ctrqszjx" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z"/></svg>
-          <span data-i18n="play">Play free</span>
+          <span>Play free</span>
         </a>
       </div>
     </article>
@@ -136,20 +129,20 @@
     <article class="game">
       <div class="media">
         <img src="img/kitchen-chaos.webp" alt="Kitchen Chaos: Chef vs Food" width="1280" height="720" loading="lazy">
-        <span class="badge" data-i18n="free">Free</span>
+        <span class="badge">Free</span>
       </div>
       <div class="info">
         <h3>Kitchen Chaos: Chef vs Food</h3>
-        <div class="tags"><span class="tag" data-i18n="action">Action</span><span class="tag" data-i18n="survivor">Survivor</span><span class="tag" data-i18n="free">Free</span></div>
-        <p data-i18n="kcDesc">Survive endless waves of angry food. Your chef throws their gear on their own: pick upgrades, mix spices into recipes, evolve your weapons and roast crowds with the oven.</p>
+        <div class="tags"><span class="tag">Action</span><span class="tag">Survivor</span><span class="tag">Free</span></div>
+        <p>Survive endless waves of angry food. Your chef throws their gear on their own: pick upgrades, mix spices into recipes, evolve your weapons and roast crowds with the oven.</p>
         <div class="facts">
-          <div class="fact"><b>18</b><small data-i18n="chefs">chefs</small></div>
-          <div class="fact"><b>18</b><small data-i18n="weapons">weapons</small></div>
-          <div class="fact"><b>10</b><small data-i18n="bossEvery">waves per boss</small></div>
+          <div class="fact"><b>18</b><small>chefs</small></div>
+          <div class="fact"><b>18</b><small>weapons</small></div>
+          <div class="fact"><b>10</b><small>waves per boss</small></div>
         </div>
         <a class="play" href="https://playgama.ai/play/azfrkkb7x6" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z"/></svg>
-          <span data-i18n="play">Play free</span>
+          <span>Play free</span>
         </a>
       </div>
     </article>
@@ -157,55 +150,31 @@
     <article class="game">
       <div class="media">
         <img src="img/star-shift.webp" alt="Star Shift: Gravity Match" width="1280" height="720" loading="lazy">
-        <span class="badge cat" data-i18n="onPlaygama">On Playgama</span>
+        <span class="badge cat">On Playgama</span>
       </div>
       <div class="info">
         <h3>Star Shift: Gravity Match</h3>
-        <div class="tags"><span class="tag" data-i18n="puzzle">Puzzle</span><span class="tag" data-i18n="match3">Match-3</span><span class="tag" data-i18n="free">Free</span></div>
-        <p data-i18n="ssDesc">A cosmic match-3 where gravity follows your swipe, so every move decides where the next cascade lands. Rescue UFOs, crack asteroids and climb the global championship.</p>
+        <div class="tags"><span class="tag">Puzzle</span><span class="tag">Match-3</span><span class="tag">Free</span></div>
+        <p>A cosmic match-3 where gravity follows your swipe, so every move decides where the next cascade lands. Rescue UFOs, crack asteroids and climb the global championship.</p>
         <div class="facts">
-          <div class="fact"><b>450</b><small data-i18n="levels">levels</small></div>
-          <div class="fact"><b>45</b><small data-i18n="worlds">worlds</small></div>
-          <div class="fact"><b>8</b><small data-i18n="langs">languages</small></div>
+          <div class="fact"><b>450</b><small>levels</small></div>
+          <div class="fact"><b>45</b><small>worlds</small></div>
+          <div class="fact"><b>8</b><small>languages</small></div>
         </div>
         <a class="play" href="https://playgama.com/game/star-shift-gravity-match" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z"/></svg>
-          <span data-i18n="play">Play free</span>
+          <span>Play free</span>
         </a>
       </div>
     </article>
 
   </div>
-  <p class="note" data-i18n="devices">Every game runs in the browser on PC, Android and iPhone, no download needed.</p>
+  <p class="note">Every game runs in the browser on PC, Android and iPhone, no download needed.</p>
 
-  <div class="soon"><b data-i18n="soonT">More games coming soon</b><span data-i18n="soonS">Follow me on X to see what I'm building next.</span></div>
+  <div class="soon"><b>More games coming soon</b><span>Follow me on X to see what I'm building next.</span></div>
 
   <footer>© <span id="y"></span> Ali Alhawaj</footer>
 </div>
-<script>
-  const T = {
-    ar: {
-      tagline: 'مطوّر ألعاب مستقل · ألعاب مجانية في المتصفح', myGames: 'ألعابي', new: 'جديدة', free: 'مجانية', onPlaygama: 'على Playgama',
-      action: 'أكشن', roguelite: 'روغلايت', survivor: 'صمود', puzzle: 'ألغاز', match3: 'مطابقة 3',
-      hsDesc: 'بطل واحد ضد جيوش لا تنتهي من الوحوش. بطلك يهاجم بنفسه: أنت تتحرك، تجمع الجواهر، وتختار ترقيات تتطور إلى قدرات خارقة.',
-      kcDesc: 'اصمد أمام موجات لا تنتهي من الأكل الغاضب. الشيف يرمي أدواته بنفسه: اختر الترقيات، اخلط البهارات في وصفات، طوّر أسلحتك واشوِ الحشود بالفرن.',
-      ssDesc: 'لعبة مطابقة 3 فضائية الجاذبية فيها تتبع سحبتك، فكل حركة تحدد وين تنزل السلسلة الجاية. أنقذ الصحون الطائرة، كسّر الكويكبات وتسلّق البطولة العالمية.',
-      heroes: 'بطل', weapons: 'سلاح', chapters: 'فصل', chefs: 'شيف', bossEvery: 'موجات لكل زعيم', levels: 'مرحلة', worlds: 'عالم', langs: 'لغات',
-      play: 'العبها مجاناً', devices: 'كل الألعاب تشتغل من المتصفح على الكمبيوتر وأندرويد وآيفون، بدون تحميل.',
-      soonT: 'ألعاب جديدة قريباً', soonS: 'تابعني على X عشان تشوف وش أشتغل عليه.',
-    },
-  };
-  const en = {}; document.querySelectorAll('[data-i18n]').forEach(e => { en[e.dataset.i18n] = e.textContent; }); T.en = en;
-  function setLang(l) {
-    document.documentElement.lang = l; document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
-    document.querySelectorAll('[data-i18n]').forEach(e => { e.textContent = T[l][e.dataset.i18n]; });
-    document.getElementById('lang').textContent = l === 'ar' ? 'English' : 'العربية';
-    try { localStorage.setItem('lang', l); } catch (e) {}
-  }
-  let saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
-  setLang(saved || ((navigator.language || '').startsWith('ar') ? 'ar' : 'en'));
-  document.getElementById('lang').onclick = () => setLang(document.documentElement.lang === 'ar' ? 'en' : 'ar');
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
