@@ -51,6 +51,10 @@
   .game:nth-child(even) .media { order: 2; }
   .media { position: relative; background: #000; min-width: 0; min-height: 300px; }
   .media video, .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* a vertical (phone) clip: shown whole, over a blurred copy of its poster */
+  .media.tall { overflow: hidden; }
+  .media.tall::before { content: ''; position: absolute; inset: -20px; background: var(--poster) center/cover; filter: blur(18px) brightness(.55); }
+  .media.tall video { object-fit: contain; }
   .badge { position: absolute; top: 12px; inset-inline-start: 12px; color: #062b10; background: #4ed36b; font-weight: 800;
     font-size: 12px; text-transform: uppercase; letter-spacing: .5px; padding: 4px 10px; border-radius: 999px; box-shadow: 0 3px 10px #0007; }
   .badge.new { background: var(--gold); color: #3a1d00; }
@@ -74,6 +78,7 @@
   .note { margin-top: 18px; text-align: center; color: var(--muted); font-weight: 700; font-size: 14px; }
   .soon { margin-top: 16px; border: 2.5px dashed var(--edge); border-radius: 20px; padding: 20px; text-align: center; color: var(--muted); font-weight: 700; }
   .soon b { color: var(--text); display: block; font-size: 17px; }
+  .soon a { color: var(--gold); text-decoration: none; border-bottom: 2px solid currentColor; }
   footer { margin-top: 32px; text-align: center; color: #8a7cb8; font-size: 13px; font-weight: 600; }
 
   @media (max-width: 760px) {
@@ -113,7 +118,7 @@
   <div class="games">
 
     <article class="game">
-      <div class="media">
+      <div class="media tall" style="--poster:url(img/star-shift.webp)">
         <video src="img/star-shift-clip.mp4" poster="img/star-shift.webp" autoplay muted loop playsinline preload="metadata" aria-label="Star Shift: Gravity Match gameplay"></video>
         <span class="badge cat">On Playgama</span>
       </div>
@@ -178,7 +183,7 @@
   </div>
   <p class="note">Every game runs in the browser on PC, Android and iPhone, no download needed.</p>
 
-  <div class="soon"><b>More games coming soon</b><span>Follow me on X to see what I'm building next.</span></div>
+  <div class="soon"><b>More games coming soon</b><span>Follow me on <a href="https://www.instagram.com/tinychaos.games/" target="_blank" rel="noopener" data-goatcounter-click="soon-instagram">Instagram</a> and <a href="https://www.youtube.com/@TinyChaosGames" target="_blank" rel="noopener" data-goatcounter-click="soon-youtube">YouTube</a> to see what I'm building next.</span></div>
 
   <footer>© <span id="y"></span> Ali Alhawaj</footer>
 </div>
