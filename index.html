@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ali Alhawaj · Games</title>
-<meta name="description" content="Free browser games by Ali Alhawaj: Kitty Kitchen, Star Shift, Horde Smash and Kitchen Chaos. Play on phone or PC, no download.">
+<meta name="description" content="Free browser games by Ali Alhawaj: Serpent Clash, Kitty Kitchen, Star Shift, Horde Smash and Kitchen Chaos. Play on phone or PC, no download.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ali Alhawaj · Games">
-<meta property="og:description" content="Free browser games for phone and PC: Kitty Kitchen, Star Shift, Horde Smash and Kitchen Chaos.">
+<meta property="og:description" content="Free browser games for phone and PC: Serpent Clash, Kitty Kitchen, Star Shift, Horde Smash and Kitchen Chaos.">
 <meta property="og:url" content="https://seeeemo5.github.io/">
 <meta property="og:image" content="https://seeeemo5.github.io/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -75,6 +75,8 @@
   .play:hover { transform: translateY(-2px); }
   .play:active { transform: translateY(3px); box-shadow: 0 3px 0 #a35a00; }
   .play svg { width: 20px; height: 20px; fill: currentColor; }
+  .play.wait { background: none; color: var(--muted); border: 2.5px dashed var(--edge); box-shadow: none; cursor: default; }
+  .play.wait:hover, .play.wait:active { transform: none; }
 
   .note { margin-top: 18px; text-align: center; color: var(--muted); font-weight: 700; font-size: 14px; }
   .soon { margin-top: 16px; border: 2.5px dashed var(--edge); border-radius: 20px; padding: 20px; text-align: center; color: var(--muted); font-weight: 700; }
@@ -121,6 +123,24 @@
 
   <h2 class="sec">My games</h2>
   <div class="games">
+
+    <article class="game">
+      <div class="media tall" style="--poster:url(img/serpent-clash.webp)">
+        <video src="img/serpent-clash-clip.mp4" poster="img/serpent-clash.webp" autoplay muted loop playsinline preload="metadata" aria-label="Serpent Clash gameplay"></video>
+        <span class="badge new">New</span>
+      </div>
+      <div class="info">
+        <h3>Serpent Clash</h3>
+        <div class="tags"><span class="tag">Snake</span><span class="tag">Arcade</span><span class="tag">Free</span></div>
+        <p>Grow your snake on a huge map with 15 rivals: eat food, bite bodies to knock their tails off, trap smaller snakes inside your coils and be bigger than the boss when the clock runs out. Upgrade length, speed and magnet, collect painted skins and climb the weekly tournament.</p>
+        <div class="facts">
+          <div class="fact"><b>16</b><small>snakes a match</small></div>
+          <div class="fact"><b>29</b><small>skins</small></div>
+          <div class="fact"><b>2</b><small>languages</small></div>
+        </div>
+        <span class="play wait">Coming soon on Playgama</span>
+      </div>
+    </article>
 
     <article class="game">
       <div class="media tall" style="--poster:url(img/kitty-kitchen.webp)">
